@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="yS5-zU-qd4">
             <objects>
-                <viewController id="OB9-xr-a2r" sceneMemberID="viewController">
+                <viewController id="OB9-xr-a2r" customClass="DefinitionViewController" customModule="Emoji_Dictionaty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xj0-lJ-Vno"/>
                         <viewControllerLayoutGuide type="bottom" id="09Z-gz-XLG"/>
@@ -57,14 +57,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛪️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT6-jY-Jaw">
-                                <rect key="frame" x="66" y="76" width="242" height="226"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="222"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛪️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT6-jY-Jaw">
+                                <rect key="frame" x="35" y="85" width="305" height="246"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="98"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiy-Ct-B4Y">
-                                <rect key="frame" x="128" y="372" width="119" height="21"/>
+                                <rect key="frame" x="128" y="310" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,12 +74,16 @@
                         <constraints>
                             <constraint firstItem="Qiy-Ct-B4Y" firstAttribute="centerX" secondItem="o4X-Cu-xSb" secondAttribute="centerX" id="0uq-Zq-oOA"/>
                             <constraint firstItem="VT6-jY-Jaw" firstAttribute="centerX" secondItem="o4X-Cu-xSb" secondAttribute="centerX" id="3eF-aW-ZEY"/>
-                            <constraint firstItem="09Z-gz-XLG" firstAttribute="top" secondItem="VT6-jY-Jaw" secondAttribute="bottom" constant="365" id="48e-xp-6YO"/>
-                            <constraint firstItem="VT6-jY-Jaw" firstAttribute="top" secondItem="Xj0-lJ-Vno" secondAttribute="bottom" constant="56" id="FoH-S0-AcB"/>
-                            <constraint firstItem="VT6-jY-Jaw" firstAttribute="leading" secondItem="o4X-Cu-xSb" secondAttribute="leadingMargin" constant="50" id="NrS-Jk-9V6"/>
-                            <constraint firstItem="Qiy-Ct-B4Y" firstAttribute="top" secondItem="VT6-jY-Jaw" secondAttribute="bottom" constant="70" id="maA-rl-4lg"/>
+                            <constraint firstItem="09Z-gz-XLG" firstAttribute="top" secondItem="VT6-jY-Jaw" secondAttribute="bottom" constant="336" id="48e-xp-6YO"/>
+                            <constraint firstItem="VT6-jY-Jaw" firstAttribute="top" secondItem="Xj0-lJ-Vno" secondAttribute="bottom" constant="21" id="FoH-S0-AcB"/>
+                            <constraint firstItem="VT6-jY-Jaw" firstAttribute="leading" secondItem="o4X-Cu-xSb" secondAttribute="leadingMargin" constant="19" id="NrS-Jk-9V6"/>
+                            <constraint firstItem="Qiy-Ct-B4Y" firstAttribute="top" secondItem="VT6-jY-Jaw" secondAttribute="bottom" constant="-21" id="maA-rl-4lg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="Qiy-Ct-B4Y" id="fRQ-OB-4ft"/>
+                        <outlet property="emojiLabel" destination="VT6-jY-Jaw" id="svM-X2-igh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAX-Rf-Dzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

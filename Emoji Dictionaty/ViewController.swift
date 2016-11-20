@@ -15,11 +15,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     
-    var emojis = ["💩 Touch to Define", "😇 Touch for Definition","😎","🐬"]
+    
+    
+    var emojis = ["💩", "😇","😎","🐬"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Emoji Dictionary"
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -41,7 +44,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Segue code
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "moveSegue", sender: "😎")
+        tableView.deselectRow(at: indexPath, animated: true)
+        let emojiCell = emojis[indexPath.row]
+        performSegue(withIdentifier: "moveSegue", sender: emojiCell)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let defVC = segue.destination as! DefinitionViewController
+        defVC.bigEmoji = sender as! String
     }
     
 
